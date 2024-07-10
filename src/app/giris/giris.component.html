@@ -1,0 +1,8 @@
+<form>
+    <div>
+        <div *ngIf="hataMesaji!=''"><font color="red"><strong>{{hataMesaji}}</strong></font></div>
+        Email: <input type="text" name="email" [(ngModel)]="email" /><br/>
+        Şifre: <input type="password" name="sifre" [(ngModel)]="sifre" /><br/>
+        <button type="button" (click)="giris()">Giriş</button>
+    </div>
+</form>
