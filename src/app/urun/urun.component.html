@@ -1,0 +1,20 @@
+<div>Ürünler</div>
+<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Adı</th>
+                <th>Fiyatı</th>
+                <th>Kategori Adı</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr (click)="urunSec(urun)" [class.seciliSatir]="urun==seciliUrun" *ngFor="let urun of urunler">
+                <td>{{urun.adi}}</td>
+                <td>{{urun.fiyat}}</td>
+                <td>{{urun.kategoriAdi}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div><input type="button" value="Seçili Ürünü Sil" (click)="urunSil()"/></div>

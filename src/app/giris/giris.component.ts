@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
   styleUrl: './giris.component.scss'
 })
 export class GirisComponent {
-  email = '';
-  sifre = '';
+  email = 'mahmut@gmail.com';
+  sifre = '123';
   hataMesaji = '';
   constructor(
     private girisService: GirisService,
@@ -19,6 +19,7 @@ export class GirisComponent {
    this.girisService.girisYap(this.email, this.sifre).subscribe({
     next: (result) => {
       // login başarılı oldu. Anasayfa'ya gidelim.
+      this.girisService.setToken(result.token);
       this.router.navigate(['/anasayfa']);
     },
     error: (error) => {

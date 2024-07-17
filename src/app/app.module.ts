@@ -7,12 +7,14 @@ import { GirisComponent } from './giris/giris.component';
 import { AnasayfaComponent } from './anasayfa/anasayfa.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { UrunComponent } from './urun/urun.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GirisComponent,
     AnasayfaComponent,
+    UrunComponent,
   ],
   imports: [
     BrowserModule,
